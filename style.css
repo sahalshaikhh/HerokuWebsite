@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  background-image: linear-gradient(
+    to right top,
+    #84a8df,
+    #7398eb,
+    #7184f2,
+    #7f6cf3,
+    #964aeb
+  );
+}
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 2px black;
+}
+img {
+  box-shadow: 2px 2px 15px black;
+}
+
+.main-Container {
+  padding-top: 2rem;
+}
+.chat-container {
+  height: 65vh;
+  overflow-y: auto;
+  border: 1px solid #7f7f7f7d;
+  width: 90vw;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: 2px 2px 25px black;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.left-message {
+  align-self: flex-start;
+  background-color: #e1f5fe;
+}
+.left-message_black {
+  align-self: flex-start;
+  background-color: #000000;
+  color: white;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.right-message {
+  align-self: flex-end;
+  background-color: #e0e0e0;
+}
+.rightMessage_black {
+  align-self: flex-end;
+  background-color: #000000;
+  color: white;
+  font-size: 12px;
+  font-weight: 200;
+}
+.container {
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow-y: auto;
+  height: 50vh;
+}
+
+.input-container {
+  width: inherit;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 10px;
+}
+
+input {
+  border-radius: 10px;
+  width: 65%;
+  background-color: #d1c9c9;
+  font-size: smaller;
+  padding-inline: 10px;
+  padding-block: 3px;
+  margin-inline: 0px;
+}
+button {
+  padding: 1px 5px !important;
+  background-color: aliceblue !important;
+  border-radius: 6px !important;
+  border: 1px solid black;
+}
+.btn:hover {
+  background-color: red !important  ;
+}
+
+@media screen and (max-width: 768px) and (min-width: 480px) {
+  .chat-container {
+    width: 60vw;
+  }
+  .input-container {
+    width: 60vw;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .chat-container {
+    width: 65vw;
+  }
+  .input-container {
+    width: 65vw;
+    margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .chat-container {
+    width: 60vw;
+  }
+  .input-container {
+    width: 60vw;
+    margin-top: 1rem;
+  }
+  input {
+    width: 45vw;
+    padding-block: 0.6rem;
+  }
+  .btn {
+    width: 10rem;
+  }
+}
